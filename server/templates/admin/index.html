@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>admin</title>
+</head>
+<body>
+
+<h1>所有用户</h1>
+<form action="/admin/update" method="post">
+    <input type="text" name="userid" placeholder="需要修改的用户id" required>
+    <br>
+    <input type="text" name="password" placeholder="新的用户密码" required>
+    <br>
+    <button type="submit">提交修改</button>
+</form>
+
+{% for u in users %}
+<div>
+    id：{{ u.id }};
+    用户名：{{ u.username }};
+    密码：{{ u.password }};
+</div>
+{% endfor %}
+
+</body>
+</html>

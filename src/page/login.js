@@ -1,5 +1,19 @@
 import React, { Component } from 'react'
 
+var ajax = (method, path, data, callback) => {
+    var r = new XMLHttpRequest()
+    // var host = 'http://localhost:5000'
+    // path = host + path
+    r.open(method, path, true)
+    r.setRequestHeader('Content-Type', 'application/json')
+    r.onreadystatechange = function() {
+        if (r.readyState === 4) {
+            callback(r.response)
+        }
+    }
+    r.send(data)
+}
+
 class Login extends Component {
     state = {
         username: "",
@@ -7,10 +21,9 @@ class Login extends Component {
     }
 
     handleSubmit = () => {
-        const text = this.state.text.trim()
-        if (text.length > 0) {
-            // this.props.addWeibo(text)
-        }
+        ajax("post", "/login", this.state, function(r) {
+            console.log(r)
+        })
         let newState = {
             username: "",
             password: "",

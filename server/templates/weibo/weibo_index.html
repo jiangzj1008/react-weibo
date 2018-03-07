@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weibo</title>
+    <style>
+        .comment {
+            border: 1px red solid;
+        }
+    </style>
+</head>
+<body>
+    <a href="/weibo/new">写新微博</a>
+
+    {% for w in weibos %}
+        <div>
+            {{ w.content }} from {{ user.username }}
+            <a href="/weibo/delete/{{ w.id }}">删除</a>
+            <a href="/weibo/edit/{{ w.id }}">修改</a>
+            {% for c in w.comments() %}
+                {% if c.deleted===false %}
+                    <div class="comment">
+                        {{ c.user().username }} : {{ c.content }}
+                        <a href="/comment/edit/{{ c.id }}">编辑评论</a>
+                        <a href="/comment/delete/{{ c.id }}">删除评论</a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <form action="/comment/add" method="post">
+            <input type="hidden" name="weiboId" value="{{ w.id }}">
+            <input name="content">
+            <br>
+            <button type="submit">添加评论</button>
+        </form>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO 程序</title>
+
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1>TODO</h1>
+    <form action="/todo/add" method="post">
+        <input type="text" name="task" placeholder="请输入todo">
+        <br>
+        <button type="submit">添加</button>
+    </form>
+    {% for t in todos %}
+        {% if t.completed %}
+            {% set rowClass = "completed" %}
+        {% else %}
+            {% set rowClass = "" %}
+        {% endif %}
+        <div class="{{ rowClass }}">
+            {{ t.id }}: {{ t.task }}
+            <a href="/todo/edit/{{ t.id }}">编辑</a>
+            <a href="/todo/complete/{{ t.id }}">完成</a>
+            <a href="/todo/delete/{{ t.id }}">删除</a>
+        </div>
+    {% endfor %}
+</body>
+</html>

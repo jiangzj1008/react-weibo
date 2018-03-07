@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "created_time": 1516862312552,
+    "updated_time": 1516862312552,
+    "username": "gua",
+    "password": "27ddc1fdeec739934385d49f898660e63b9e8516aa3e4047c1d8df1b3a6746d8",
+    "note": "",
+    "role": 1
+  },
+  {
+    "id": 2,
+    "created_time": 1517039709580,
+    "updated_time": 1517039709580,
+    "username": "jiang",
+    "password": "bd7ca838d5e450a6c167c1153f02cfdce41b1f61b632241674ef4afb1ce9ecce",
+    "note": "",
+    "role": 2
+  }
+]
