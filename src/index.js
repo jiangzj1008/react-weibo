@@ -4,7 +4,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 // 引入 reducer
-import reducer from './reducer/todos'
+import reducer from './reducer/weibos'
 
 // 引入静态资源
 import './style/index.css'

@@ -2,35 +2,37 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as TodoActions from './actions/index'
+import * as WeiboActions from './actions/weibo_action'
+import * as CommentActions from './actions/comment_action'
 
 // 引入组件
-import TodoList from './components/todo_list'
-import TodoAdd from './components/todo_add'
+import WeiboList from './components/weibo_list'
+import WeiboAdd from './components/weibo_add'
 
 class Main extends Component {
     render() {
-        const {todos, actions} = this.props
+        const {weibos, actions, commentActions} = this.props
         return (
             <div>
-                <TodoAdd addTodo={actions.addTodo} />
-                <TodoList todos={todos} actions={actions} />
+                <WeiboAdd addWeibo={actions.addWeibo} />
+                <WeiboList weibos={weibos} actions={actions} commentActions={commentActions}/>
             </div>
         )
     }
 }
 
 Main.propTypes = {
-    todos: PropTypes.array.isRequired,
+    weibos: PropTypes.array.isRequired,
     actions: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
-    todos: state
+    weibos: state
 })
 
 const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(TodoActions, dispatch)
+    actions: bindActionCreators(WeiboActions, dispatch),
+    commentActions: bindActionCreators(CommentActions, dispatch),
 })
 
 const AppContainer = connect(

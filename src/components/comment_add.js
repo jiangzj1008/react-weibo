@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 
-class TodoAdd extends Component {
+class CommentAdd extends Component {
     state = {
-        text: ''
+        weibo_id: this.props.weibo_id,
+        comment: ''
     }
 
     handleSubmit = () => {
-        const text = this.state.text.trim()
+        const text = this.state.comment.trim()
         if (text.length > 0) {
-            this.props.addTodo(text)
+            this.props.addComment(this.state)
+            console.log(this.state)
         }
         let newState = {
             text: ''
@@ -19,7 +21,7 @@ class TodoAdd extends Component {
     handleChange = e => {
         let val = e.target.value
         let newState = {
-            text: val
+            comment: val
         }
         this.setState(newState)
     }
@@ -27,15 +29,15 @@ class TodoAdd extends Component {
     render() {
         return (
             <div>
-                <h4>添加待办事项</h4>
                 <input
-                    placeholder="待办事项"
+                    placeholder="输入你的评论"
                     onChange={this.handleChange}
                 />
-                <button onClick={this.handleSubmit}>添加</button>
+                <button onClick={this.handleSubmit}>评论</button>
             </div>
         )
     }
 }
 
-export default TodoAdd;
+export default CommentAdd;
+
