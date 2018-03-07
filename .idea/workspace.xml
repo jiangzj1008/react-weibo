@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae82379-8436-4168-8b10-ad747a5d0350" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/comment_action.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/weibo_action.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/comment_add.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/comment_item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/comment_list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/weibo_item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constants/comments_action_types.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/actions/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/todo_item.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/todo_add.js" afterPath="$PROJECT_DIR$/src/components/weibo_add.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/todo_list.js" afterPath="$PROJECT_DIR$/src/components/weibo_list.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/reducer/todos.js" afterPath="$PROJECT_DIR$/src/reducer/weibos.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constants/ActionTypes.js" afterPath="$PROJECT_DIR$/src/constants/ActionTypes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/container.js" afterPath="$PROJECT_DIR$/src/container.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,8 +24,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="15" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="19" selection-end-column="15" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -46,43 +33,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="container.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/container.js">
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="277">
-                  <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#0#40#0" expanded="true" />
-                    <element signature="e#280#327#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="weibos.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/reducer/weibos.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#0#75#0" expanded="true" />
-                    <element signature="e#450#681#0" expanded="false" />
-                    <element signature="e#722#835#0" expanded="false" />
-                    <element signature="e#865#961#0" expanded="false" />
-                    <element signature="e#1003#1247#0" expanded="false" />
-                    <element signature="e#1287#1562#0" expanded="false" />
-                    <element signature="e#1609#1786#0" expanded="false" />
-                    <element signature="e#1829#2112#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="comment_item.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/comment_item.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -92,54 +47,15 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="weibo_list.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/weibo_list.js">
+          <file leaf-file-name="container.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/container.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="comment_list.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/comment_list.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="weibo_item.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/weibo_item.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="106" lean-forward="false" selection-start-line="22" selection-start-column="106" selection-end-line="22" selection-end-column="106" />
+                <state relative-caret-position="488">
+                  <caret line="43" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
+                    <element signature="e#280#327#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="weibo_action.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/actions/weibo_action.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="weibo_add.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/weibo_add.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="427">
-                  <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -175,7 +91,6 @@
         <option value="$PROJECT_DIR$/src/pages/todo_add.js" />
         <option value="$PROJECT_DIR$/src/pages/todo_list.js" />
         <option value="$PROJECT_DIR$/src/pages/todo_item.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/style/index.css" />
         <option value="$PROJECT_DIR$/src/components/todo_list.js" />
         <option value="$PROJECT_DIR$/src/constants/ActionTypes.js" />
@@ -194,6 +109,9 @@
         <option value="$PROJECT_DIR$/src/components/comment_list.js" />
         <option value="$PROJECT_DIR$/src/components/weibo_add.js" />
         <option value="$PROJECT_DIR$/src/container.js" />
+        <option value="$PROJECT_DIR$/src/weibo.js" />
+        <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -389,12 +307,12 @@
       <workItem from="1520173597919" duration="4835000" />
       <workItem from="1520252201873" duration="12483000" />
       <workItem from="1520344946392" duration="1628000" />
-      <workItem from="1520390239486" duration="18672000" />
+      <workItem from="1520390239486" duration="19773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53343000" />
+    <option name="totallyTimeSpent" value="54444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -432,16 +350,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/weibo_item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -639,7 +547,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js" />
+    <entry file="file://$PROJECT_DIR$/src/app.js" />
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -743,6 +651,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/weibo_add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/comment_list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -753,8 +669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="488">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
             <element signature="e#280#327#0" expanded="true" />
@@ -762,21 +678,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/weibo_add.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

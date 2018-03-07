@@ -10,7 +10,8 @@ import reducer from './reducer/weibos'
 import './style/index.css'
 
 // 引入程序
-import App from './container';
+// import App from './container'
+import App from './app'
 
 const store = createStore(reducer)
 const rootEl = document.querySelector('#root')
