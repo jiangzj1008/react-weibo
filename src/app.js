@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
+
+import Header from './components/header'
+import Home from './page/home'
 import Login from './page/login'
 import Register from './page/register'
 
@@ -9,12 +12,14 @@ class Main extends Component {
         return (
             <Router>
                 <div>
-                    <ul>
-                        <li><Link to="/login">登陆</Link></li>
-                        <li><Link to="/register">注册</Link></li>
-                    </ul>
-                    <Route path="/login" component={Login}/>
-                    <Route path="/register" component={Register}/>
+                    <Header/>
+                    <div >
+                        <Switch>
+                            <Route exact path="/" component={Home}/>
+                            <Route path="/login" component={Login}/>
+                            <Route path="/register" component={Register}/>
+                        </Switch>
+                    </div>
                 </div>
             </Router>
         )

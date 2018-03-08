@@ -25,6 +25,16 @@ weibo.get('/', loginRequired, (request, response) => {
     response.render('weibo/weibo_index.html', args)
 })
 
+weibo.get('/all', (request, response) => {
+    const weibos = Weibo.all()
+    const dict = {
+        success: true,
+        data: weibos,
+        msg: '',
+    }
+    response.json(dict)
+})
+
 weibo.get('/user/:userId', (request, response) => {
     const u = currentUser(request)
     const authorId = Number(request.params.userId || u.id)
@@ -46,7 +56,12 @@ weibo.post('/add', loginRequired, (request, response) => {
     const form = request.body
     form.userId = u.id
     const w = Weibo.create(form)
-    response.redirect('/weibo/')
+    const dict = {
+        success: true,
+        data: w,
+        msg: '',
+    }
+    response.json(dict)
 })
 
 weibo.get('/delete/:weiboId', weiboOwnerRequire, (request, response) => {

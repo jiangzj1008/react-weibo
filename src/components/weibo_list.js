@@ -1,21 +1,42 @@
 import React, { Component } from 'react'
 
-// 引入组件
+import {log, ajax} from '../tools/tool.js'
 import WeiboItem from './weibo_item'
 
+
 class WeiboList extends Component {
+    state = {
+        data: [],
+    }
+
+    componentDidMount() {
+        this.getData((res) => {
+            var d = JSON.parse(res)
+            log(d)
+            this.setState({
+                data: d.data,
+            })
+        })
+    }
+
+    getData(callback) {
+        var req = {
+            url: '/weibo/all',
+            method: 'get',
+            contentType: 'application/json',
+            callBack: callback,
+        }
+        ajax(req)
+    }
+
     render() {
-        const {weibos, actions, commentActions} = this.props
-        const itemlist = weibos.map((weibo) =>
-            <WeiboItem key={weibo.id} weibo={weibo} {...actions} commentActions={commentActions}/>
-        )
+        const list = this.state.data.map((item) => {
+            return <WeiboItem key={item.id} weibo={item}/>
+        })
         return (
-            <div>
-                <h4>微博列表</h4>
-                <ol>
-                    {itemlist}
-                </ol>
-            </div>
+            <ul>
+                {list}
+            </ul>
         )
     }
 }

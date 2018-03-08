@@ -3,6 +3,7 @@ const nunjucks = require('nunjucks')
 const bodyParser = require('body-parser')
 const session = require('cookie-session')
 const path = require('path')
+const cors = require('cors')
 
 const {log} = require('./utils')
 const { secretKey } = require('./config')
@@ -18,10 +19,12 @@ const app = express()
 app.use(bodyParser.urlencoded({
     extended: true,
 }))
+app.use(bodyParser.json())
 
 app.use(session({
     secret: secretKey,
 }))
+app.use(cors())
 
 nunjucks.configure('templates', {
     autoescape: true,

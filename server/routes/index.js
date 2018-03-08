@@ -18,25 +18,35 @@ index.get('/', (request, response) => {
 
 index.post('/login', (request, response) => {
     const form = request.body
-    console.log(form)
+    // console.log(form)
+    const dict = {
+        success: true,
+        data: null,
+        msg: '',
+    }
     if (User.validateLogin(form)) {
         const u = User.findBy('username', form.username)
-        // 直接指定 request.session 的 key, 然后通过这个 key 来获取设置的值
         request.session.uid = u.id
-        response.json("success")
     } else {
-        response.json("fail")
+        dict.success = false
     }
-})
-
-index.get('/register', (request, response) => {
-    response.render('index/register.html')
+    response.json(dict)
 })
 
 index.post('/register', (request, response) => {
     const form = request.body
     const u = User.create(form)
-    response.redirect('/')
+    const dict = {
+        success: true,
+        data: null,
+        msg: '',
+    }
+    if (u.username) {
+        request.session.uid = u.id
+    } else {
+        dict.success = false
+    }
+    response.json(dict)
 })
 
 index.get('/logout', (request, response) => {

@@ -1,65 +1,68 @@
 import React, { Component } from 'react'
+import { Form, Icon, Input, Button, Checkbox } from 'antd'
+import {Link} from 'react-router-dom'
 
-var ajax = (method, path, data, callback) => {
-    var r = new XMLHttpRequest()
-    // var host = 'http://localhost:5000'
-    // path = host + path
-    r.open(method, path, true)
-    r.setRequestHeader('Content-Type', 'application/json')
-    r.onreadystatechange = function() {
-        if (r.readyState === 4) {
-            callback(r.response)
-        }
-    }
-    r.send(data)
-}
+import {log, ajax} from '../tools/tool.js'
+
+const FormItem = Form.Item
 
 class Login extends Component {
-    state = {
-        username: "",
-        password: "",
-    }
-
-    handleSubmit = () => {
-        ajax("post", "/login", this.state, function(r) {
-            console.log(r)
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.form.validateFields((err, values) => {
+            if (!err) {
+                const request = {
+                    method: "post",
+                    url: "/login",
+                    data: values,
+                    contentType: "application/json",
+                    callBack: function (r) {
+                        var data = JSON.parse(r)
+                        if (data.success) {
+                            window.location.pathname = '/'
+                        }
+                    }
+                }
+                ajax(request)
+            }
         })
-        let newState = {
-            username: "",
-            password: "",
-        }
-        this.setState(newState)
-    }
-
-    handleChange = e => {
-        const val = e.target.value
-        const key = e.target.name
-        let newState = {
-            [key]: val
-        }
-        this.setState(newState)
     }
 
     render() {
+        const { getFieldDecorator } = this.props.form;
         return (
-            <div>
-                <h4>登录</h4>
-                <input
-                    placeholder="用户名"
-                    name="username"
-                    onChange={this.handleChange}
-                    value={this.state.username}
-                />
-                <input
-                    placeholder="密码"
-                    name="password"
-                    onChange={this.handleChange}
-                    value={this.state.password}
-                />
-                <button onClick={this.handleSubmit}>登录</button>
-            </div>
+            <Form onSubmit={this.handleSubmit} className="login-form">
+                <FormItem>
+                    {getFieldDecorator('username', {
+                        rules: [{ required: true, message: 'Please input your username!' }],
+                    })(
+                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
+                    )}
+                </FormItem>
+                <FormItem>
+                    {getFieldDecorator('password', {
+                        rules: [{ required: true, message: 'Please input your Password!' }],
+                    })(
+                        <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+                    )}
+                </FormItem>
+                <FormItem>
+                    {getFieldDecorator('remember', {
+                        valuePropName: 'checked',
+                        initialValue: true,
+                    })(
+                        <Checkbox>Remember me</Checkbox>
+                    )}
+                    <a className="login-form-forgot" href="">Forgot password</a>
+                    <Button type="primary" htmlType="submit" className="login-form-button">
+                        Log in
+                    </Button>
+                    Or <Link to="/register">register now!</Link>
+                </FormItem>
+            </Form>
         )
     }
 }
 
-export default Login;
+const WrappedLoginForm = Form.create()(Login)
+export default WrappedLoginForm;

@@ -8,6 +8,7 @@ import reducer from './reducer/weibos'
 
 // 引入静态资源
 import './style/index.css'
+import './style/login.css'
 
 // 引入程序
 // import App from './container'
