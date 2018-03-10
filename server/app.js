@@ -24,7 +24,7 @@ app.use(bodyParser.json())
 app.use(session({
     secret: secretKey,
 }))
-app.use(cors())
+// app.use(cors())
 
 nunjucks.configure('templates', {
     autoescape: true,

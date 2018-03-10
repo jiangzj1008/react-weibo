@@ -29,7 +29,18 @@ class User extends Model {
     static validateLogin(form) {
         const {username, password} = form
         const u = this.findBy('username', username)
-        return u !== null && u.password === this.saltedPassword(password)
+        const valid = u !== null && u.password === this.saltedPassword(password)
+        const dict = {
+            success: false,
+            data: null,
+            msg: '',
+        }
+        if (valid) {
+            const u = User.findBy('username', form.username)
+            dict.data = u.id
+            dict.success = true
+        }
+        return dict
     }
 
     // 校验注册的逻辑
@@ -39,12 +50,17 @@ class User extends Model {
         const validPassword = password.length > 2
         const uniqueUsername = User.findBy('username', username) === null
         const valid = validUsername && validPassword && uniqueUsername
+        const dict = {
+            success: false,
+            data: null,
+            msg: '',
+        }
         if (valid) {
             const u = this.create(form)
-            return u
-        } else {
-            return null
+            dict.data = u
+            dict.success = true
         }
+        return dict
     }
 
     static guest() {

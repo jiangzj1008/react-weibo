@@ -1,41 +1,24 @@
 import {
-    ALL_WEIBO,
-    ADD_WEIBO,
-    DELETE_WEIBO,
-} from '../constants/ActionTypes'
-
-import {
     ALL_COMMENT,
     ADD_COMMENT,
     DELETE_COMMENT,
 } from '../constants/comments_action_types'
 
 const initialState = [
-  {
-      user: {
-          username: 'gee',
-          id: 'gee_id',
-      },
-      weibo: {
-          id: 0,
-          content: 'Use Redux',
-      }
-  }
+    {
+        user: {
+            username: 'gee',
+            id: 'gee_id',
+        },
+        comment: {
+            id: 0,
+            content: 'comment',
+        }
+    }
 ]
 
-const allWeibo = (state, action) => {
+const allComment = (state, action) => {
     return action.payload
-}
-
-const addWeibo = (state, action) => {
-    return [...state, action.payload]
-}
-
-const deleteWeibo = (state, action) => {
-    let newState = state.filter((item) => {
-        return item.weibo.id !== action.payload.wid
-    })
-    return newState
 }
 
 const get = (state, wid) => {
@@ -43,23 +26,6 @@ const get = (state, wid) => {
         return item.id === wid
     })
     return w[0]
-}
-
-const allComment = (state, action) => {
-    const commentList = action.payload
-    const newState = state.map((m) => {
-        const {user, weibo} = m
-        if (m.weibo.id === commentList[0].comment.weiboId) {
-            return {
-                user,
-                weibo,
-                commentList
-            }
-        } else {
-            return m
-        }
-    })
-    return newState
 }
 
 const pushComment = (weibo, comment) => {
@@ -120,9 +86,6 @@ const noop = (state, action)  => {
 
 const reducer = function(state = initialState, action) {
     const actionMapper = {
-        [ADD_WEIBO]: addWeibo,
-        [ALL_WEIBO]: allWeibo,
-        [DELETE_WEIBO]: deleteWeibo,
         [ALL_COMMENT]: allComment,
         [ADD_COMMENT]: addComment,
         [DELETE_COMMENT]: deleteComment,

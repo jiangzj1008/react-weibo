@@ -1,15 +1,37 @@
 import React, { Component } from 'react'
 
-// 引入组件
+import {ajax} from '../tools/tool.js'
 import CommentItem from './comment_item'
 
 class CommentList extends Component {
+    // componentDidMount() {
+    //     const allComment = this.props.commentActions.allComment
+    //     this.getData((res) => {
+    //         var d = JSON.parse(res)
+    //         console.log(d)
+    //         allComment(d.data)
+    //     })
+    // }
+    //
+    // getData(callback) {
+    //     const wid = this.props.weibo_id
+    //     var req = {
+    //         path: `/comment/all/${wid}`,
+    //         method: 'get',
+    //         contentType: 'application/json',
+    //         callBack: callback,
+    //     }
+    //     ajax(req)
+    // }
+
     render() {
-        console.log(this.props)
-        const {comments, commentActions, weibo_id} = this.props
-        const itemlist = comments.map((c) =>
-            <CommentItem key={c.id} comment={c} {...commentActions} weibo_id={weibo_id}/>
-        )
+        const {commentList} = this.props
+        const itemlist = commentList.map((c) => {
+            const {comment, user} = c
+            return (
+                <CommentItem key={comment.id} comment={comment} user={user}/>
+            )
+        })
         return (
             <div>
                 <h4>评论列表</h4>

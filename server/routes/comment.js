@@ -13,6 +13,12 @@ const {
 
 const comment = express.Router()
 
+comment.get('/all/:weiboId', (request, response) => {
+    const weiboId = Number(request.params.weiboId)
+    const dict = Comment.getall(weiboId)
+    response.json(dict)
+})
+
 comment.post('/add', loginRequired, (request, response) => {
     const u = currentUser(request)
     const form = request.body

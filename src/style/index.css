@@ -8,3 +8,19 @@ body {
 .completed {
     text-decoration: line-through;
 }
+
+.weibo_list {
+    padding: 0px;
+}
+
+.weibo_item {
+    list-style-type: none;
+    width: 300px;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.weibo_controls {
+    text-align: right;
+}

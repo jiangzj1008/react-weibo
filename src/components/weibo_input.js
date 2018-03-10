@@ -1,32 +1,40 @@
 import React, { Component } from 'react'
-import { Form, Icon, Input, Button } from 'antd'
+import { Form, Input, Button } from 'antd'
 
-import {log, ajax} from '../tools/tool.js'
+import {ajax} from '../tools/tool.js'
 
 const FormItem = Form.Item
 const {TextArea} = Input
 
 class Main extends Component {
     handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+        const addWeibo = this.props.weiboActions.addWeibo
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                const request = {
-                    method: "post",
-                    url: "/weibo/add",
-                    data: values,
-                    contentType: "application/json",
-                    callBack: function (r) {
-                        var data = JSON.parse(r)
-                        if (data.success) {
-                            log(data.data)
-                            // window.location.pathname = '/'
-                        }
+                this.sendData(values, (res) => {
+                    const r = JSON.parse(res)
+                    if (r.success) {
+                        addWeibo(r.data)
                     }
-                }
-                ajax(request)
+                })
             }
         })
+    }
+
+    sendData(values, callback) {
+        const uid = sessionStorage.getItem('uid')
+        const d = Object.assign(values, {
+            uid: uid,
+        })
+        const request = {
+            method: "post",
+            path: "/weibo/add",
+            data: d,
+            contentType: "application/json",
+            callBack: callback,
+        }
+        ajax(request)
     }
 
     render() {
@@ -48,7 +56,6 @@ class Main extends Component {
             </Form>
         )
     }
-
 }
 
 const WrappedMain = Form.create()(Main)

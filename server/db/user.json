@@ -43,5 +43,14 @@
     "password": "27ddc1fdeec739934385d49f898660e63b9e8516aa3e4047c1d8df1b3a6746d8",
     "note": "",
     "role": 2
+  },
+  {
+    "id": 6,
+    "created_time": 1520654808998,
+    "updated_time": 1520654808998,
+    "username": "xiao",
+    "password": "27ddc1fdeec739934385d49f898660e63b9e8516aa3e4047c1d8df1b3a6746d8",
+    "note": "",
+    "role": 2
   }
 ]

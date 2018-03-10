@@ -18,33 +18,19 @@ index.get('/', (request, response) => {
 
 index.post('/login', (request, response) => {
     const form = request.body
-    // console.log(form)
-    const dict = {
-        success: true,
-        data: null,
-        msg: '',
-    }
-    if (User.validateLogin(form)) {
-        const u = User.findBy('username', form.username)
-        request.session.uid = u.id
-    } else {
-        dict.success = false
+    const dict = User.validateLogin(form)
+    if (dict.success) {
+        // response.cookie("uid", dict.data)
+        request.session.uid = dict.data
     }
     response.json(dict)
 })
 
 index.post('/register', (request, response) => {
     const form = request.body
-    const u = User.create(form)
-    const dict = {
-        success: true,
-        data: null,
-        msg: '',
-    }
-    if (u.username) {
-        request.session.uid = u.id
-    } else {
-        dict.success = false
+    const dict = User.validateRegister(form)
+    if (dict.success) {
+        request.session.uid = dict.data
     }
     response.json(dict)
 })

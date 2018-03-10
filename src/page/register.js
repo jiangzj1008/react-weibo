@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Form, Icon, Input, Button } from 'antd'
 import {Link} from 'react-router-dom'
 
-import {log, ajax} from '../tools/tool.js'
+import {ajax} from '../tools/tool.js'
 
 const FormItem = Form.Item
 
@@ -13,13 +13,13 @@ class Register extends Component {
             if (!err) {
                 const request = {
                     method: "post",
-                    url: "/register",
+                    path: "/register",
                     data: values,
                     contentType: "application/json",
                     callBack: function (r) {
                         var data = JSON.parse(r)
                         if (data.success) {
-                            window.location.pathname = '/'
+                            sessionStorage.setItem('uid', data.data)
                         }
                     }
                 }

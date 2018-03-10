@@ -1,43 +1,55 @@
 import React, { Component } from 'react'
+import { Form, Icon, Input, Button } from 'antd'
+
+import {ajax} from '../tools/tool.js'
+
+const FormItem = Form.Item
 
 class CommentAdd extends Component {
-    state = {
-        weibo_id: this.props.weibo_id,
-        comment: ''
-    }
-
-    handleSubmit = () => {
-        const text = this.state.comment.trim()
-        if (text.length > 0) {
-            this.props.addComment(this.state)
-            console.log(this.state)
-        }
-        let newState = {
-            text: ''
-        }
-        this.setState(newState)
-    }
-
-    handleChange = e => {
-        let val = e.target.value
-        let newState = {
-            comment: val
-        }
-        this.setState(newState)
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.form.validateFields((err, values) => {
+            if (!err) {
+                console.log(values)
+                // const request = {
+                //     method: "post",
+                //     path: "/login",
+                //     data: values,
+                //     contentType: "application/json",
+                //     callBack: function (r) {
+                //         var data = JSON.parse(r)
+                //         if (data.success) {
+                //             sessionStorage.setItem('uid', data.data)
+                //             window.location.pathname = '/'
+                //         }
+                //     }
+                // }
+                // ajax(request)
+            }
+        })
     }
 
     render() {
+        const { getFieldDecorator } = this.props.form;
         return (
-            <div>
-                <input
-                    placeholder="输入你的评论"
-                    onChange={this.handleChange}
-                />
-                <button onClick={this.handleSubmit}>评论</button>
-            </div>
+            <Form onSubmit={this.handleSubmit} layout="inline" className="login-form">
+                <FormItem>
+                    {getFieldDecorator('content', {
+                        rules: [{ required: true, message: 'Please input your comment!' }],
+                    })(
+                        <Input prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="comment" size="small" />
+                    )}
+                </FormItem>
+                <FormItem>
+                    <Button htmlType="submit" size="small">
+                        添加评论
+                    </Button>
+                </FormItem>
+            </Form>
         )
     }
 }
 
-export default CommentAdd;
+const WrappedMain = Form.create()(CommentAdd)
+export default WrappedMain;
 

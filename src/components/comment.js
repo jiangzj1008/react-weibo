@@ -2,30 +2,28 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import * as WeiboActions from '../actions/weibo_action'
 import * as CommentActions from '../actions/comment_action'
 
-import WeiboInput from '../components/weibo_input'
-import WeiboList from '../components/weibo_list'
+import CommentAdd from './comment_add'
+import CommentList from './comment_list'
 
 class Main extends Component {
     render() {
-        const {weibos, weiboActions, commentActions} = this.props
+        const {comments, weibo_id, commentActions} = this.props
         return (
             <div>
-                <WeiboInput weiboActions={weiboActions}/>
-                <WeiboList weibos={weibos} weiboActions={weiboActions} commentActions={commentActions}/>
+                <CommentAdd/>
+                <CommentList comments={comments} weibo_id={weibo_id} commentActions={commentActions}/>
             </div>
         )
     }
 }
 
 const mapStateToProps = state => ({
-    weibos: state
+    comments: state
 })
 
 const mapDispatchToProps = dispatch => ({
-    weiboActions: bindActionCreators(WeiboActions, dispatch),
     commentActions: bindActionCreators(CommentActions, dispatch),
 })
 

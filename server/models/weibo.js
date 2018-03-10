@@ -10,6 +10,40 @@ class Weibo extends Model {
         this.deleted = form.deleted || false
     }
 
+    static weiboDetail(w) {
+        const user = User.get(w.userId)
+        return {
+            weibo: w,
+            user: user,
+        }
+    }
+
+    static getall() {
+        const weibo = super.all()
+        const temp = weibo.filter((w) => {
+            return w.deleted === false
+        })
+        const data = temp.map((w) => {
+            return this.weiboDetail(w)
+        })
+        const dict = {
+            success: true,
+            data: data,
+            msg: '',
+        }
+        return dict
+    }
+
+    static create(form) {
+        const w = super.create(form)
+        const d = this.weiboDetail(w)
+        const dict = {
+            success: true,
+            data: d,
+            msg: '',
+        }
+        return dict
+    }
     static update(form) {
         const id = Number(form.id)
         const w = this.get(id)
@@ -31,7 +65,12 @@ class Weibo extends Model {
         w.deleted = true
         w.updated_time = Date.now()
         w.save()
-        return w
+        const dict = {
+            success: true,
+            data: w,
+            msg: '',
+        }
+        return dict
     }
 
     isOwner(id) {

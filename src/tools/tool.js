@@ -2,7 +2,10 @@ const log = console.log.bind(console)
 
 const ajax = function(request) {
 	var r = new XMLHttpRequest()
-	r.open(request.method, request.url, true)
+	// var host = "http://localhost:5000"
+    // var url = host + request.path
+    var url = request.path
+	r.open(request.method, url, true)
 	if (request.contentType !== undefined) {
 		r.setRequestHeader('Content-Type', request.contentType)
 	}

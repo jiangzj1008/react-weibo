@@ -10,6 +10,30 @@ class Comment extends Model {
         this.deleted = 'deleted' in form ? form.deleted : false
     }
 
+    static commentDetail(m) {
+        const user = User.get(m.userId)
+        return {
+            comment: m,
+            user: user,
+        }
+    }
+
+    static getall(id) {
+        const comment = super.findAll("weiboId", id)
+        const temp = comment.filter((i) => {
+            return i.deleted === false
+        })
+        const data = temp.map((i) => {
+            return this.commentDetail(i)
+        })
+        const dict = {
+            success: true,
+            data: data,
+            msg: '',
+        }
+        return dict
+    }
+
     static update(form) {
         const id = Number(form.id)
         const c = this.get(id)

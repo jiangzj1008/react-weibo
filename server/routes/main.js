@@ -16,6 +16,17 @@ const currentUser = (request) => {
     }
 }
 
+// const currentUser = (request) => {
+//     // 通过 session 获取 uid, 如果没有的话就设置成空字符串
+//     const uid = Number(request.body.uid || -1)
+//     const u = User.get(uid)
+//     if (u === null) {
+//         return User.guest()
+//     } else {
+//         return u
+//     }
+// }
+
 const loginRequired = (request, response, next) => {
     const u = currentUser(request)
     if (u.id === -1) {

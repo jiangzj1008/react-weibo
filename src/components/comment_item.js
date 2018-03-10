@@ -11,10 +11,13 @@ class CommentItem extends Component {
     }
 
     render() {
-        const {comment} = this.props
+        const {comment,user} = this.props
         return (
             <li>
-                <span>{comment.text}</span>
+                <p>
+                    <b>{user.username}: </b>
+                    <span>{comment.content}</span>
+                </p>
                 <button onClick={this.handleDelete}>删除</button>
             </li>
         )

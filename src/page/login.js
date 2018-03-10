@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Form, Icon, Input, Button, Checkbox } from 'antd'
 import {Link} from 'react-router-dom'
 
-import {log, ajax} from '../tools/tool.js'
+import {ajax} from '../tools/tool.js'
 
 const FormItem = Form.Item
 
@@ -13,12 +13,13 @@ class Login extends Component {
             if (!err) {
                 const request = {
                     method: "post",
-                    url: "/login",
+                    path: "/login",
                     data: values,
                     contentType: "application/json",
                     callBack: function (r) {
                         var data = JSON.parse(r)
                         if (data.success) {
+                            sessionStorage.setItem('uid', data.data)
                             window.location.pathname = '/'
                         }
                     }
@@ -30,6 +31,7 @@ class Login extends Component {
 
     render() {
         const { getFieldDecorator } = this.props.form;
+        console.log(this.props)
         return (
             <Form onSubmit={this.handleSubmit} className="login-form">
                 <FormItem>

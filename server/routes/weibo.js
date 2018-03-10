@@ -26,12 +26,7 @@ weibo.get('/', loginRequired, (request, response) => {
 })
 
 weibo.get('/all', (request, response) => {
-    const weibos = Weibo.all()
-    const dict = {
-        success: true,
-        data: weibos,
-        msg: '',
-    }
+    const dict = Weibo.getall()
     response.json(dict)
 })
 
@@ -55,19 +50,14 @@ weibo.post('/add', loginRequired, (request, response) => {
     const u = currentUser(request)
     const form = request.body
     form.userId = u.id
-    const w = Weibo.create(form)
-    const dict = {
-        success: true,
-        data: w,
-        msg: '',
-    }
+    const dict = Weibo.create(form)
     response.json(dict)
 })
 
-weibo.get('/delete/:weiboId', weiboOwnerRequire, (request, response) => {
+weibo.post('/delete/:weiboId', weiboOwnerRequire, (request, response) => {
     const weiboId = Number(request.params.weiboId)
-    Weibo.remove(weiboId)
-    response.redirect('/weibo')
+    const dict = Weibo.remove(weiboId)
+    response.json(dict)
 })
 
 weibo.get('/edit/:weiboId', weiboOwnerRequire, (request, response) => {
