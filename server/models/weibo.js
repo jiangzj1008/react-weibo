@@ -44,6 +44,7 @@ class Weibo extends Model {
         }
         return dict
     }
+
     static update(form) {
         const id = Number(form.id)
         const w = this.get(id)

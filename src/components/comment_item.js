@@ -1,13 +1,25 @@
 import React, { Component } from 'react'
+import {Button} from 'antd'
+
+import {ajax} from '../tools/tool.js'
 
 class CommentItem extends Component {
     handleDelete = () => {
-        const {weibo_id, comment, deleteComment} = this.props
-        const payload = {
-            comment_id: comment.id,
-            weibo_id: weibo_id,
+        const {comment, commentActions} = this.props
+        const deleteComment = commentActions.deleteComment
+        const request = {
+            method: "get",
+            path: `/comment/delete/${comment.id}`,
+            data: null,
+            contentType: "application/json",
+            callBack: function (res) {
+                const r = JSON.parse(res)
+                if (r.success) {
+                    deleteComment(r.data)
+                }
+            }
         }
-        deleteComment(payload)
+        ajax(request)
     }
 
     render() {
@@ -18,7 +30,7 @@ class CommentItem extends Component {
                     <b>{user.username}: </b>
                     <span>{comment.content}</span>
                 </p>
-                <button onClick={this.handleDelete}>删除</button>
+                <Button onClick={this.handleDelete} type="danger" shape="circle" icon="close" size="small"/>
             </li>
         )
     }

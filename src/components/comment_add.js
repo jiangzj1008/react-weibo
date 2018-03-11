@@ -7,24 +7,27 @@ const FormItem = Form.Item
 
 class CommentAdd extends Component {
     handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+        const weiboId = this.props.weiboId
+        const addComment = this.props.commentActions.addComment
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log(values)
-                // const request = {
-                //     method: "post",
-                //     path: "/login",
-                //     data: values,
-                //     contentType: "application/json",
-                //     callBack: function (r) {
-                //         var data = JSON.parse(r)
-                //         if (data.success) {
-                //             sessionStorage.setItem('uid', data.data)
-                //             window.location.pathname = '/'
-                //         }
-                //     }
-                // }
-                // ajax(request)
+                const data = Object.assign({}, values, {
+                    weiboId: weiboId,
+                })
+                const request = {
+                    method: "post",
+                    path: "/comment/add",
+                    data: data,
+                    contentType: "application/json",
+                    callBack: function (res) {
+                        const r = JSON.parse(res)
+                        if (r.success) {
+                            addComment(r.data)
+                        }
+                    }
+                }
+                ajax(request)
             }
         })
     }

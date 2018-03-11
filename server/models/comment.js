@@ -10,6 +10,17 @@ class Comment extends Model {
         this.deleted = 'deleted' in form ? form.deleted : false
     }
 
+    static create(form) {
+        const m = super.create(form)
+        const d = this.commentDetail(m)
+        const dict = {
+            success: true,
+            data: d,
+            msg: '',
+        }
+        return dict
+    }
+
     static commentDetail(m) {
         const user = User.get(m.userId)
         return {
@@ -55,7 +66,13 @@ class Comment extends Model {
         c.deleted = true
         c.updated_time = Date.now()
         c.save()
-        return c
+        const data = this.commentDetail(c)
+        const dict = {
+            success: true,
+            data: data,
+            msg: '',
+        }
+        return dict
     }
 
     isOwner(id) {

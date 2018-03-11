@@ -6,6 +6,7 @@ import {
 
 import {
     ALL_COMMENT,
+    HIDE_COMMENT,
     ADD_COMMENT,
     DELETE_COMMENT,
 } from '../constants/comments_action_types'
@@ -38,18 +39,11 @@ const deleteWeibo = (state, action) => {
     return newState
 }
 
-const get = (state, wid) => {
-    const w = state.filter((item) => {
-        return item.id === wid
-    })
-    return w[0]
-}
-
-const allComment = (state, action) => {
-    const commentList = action.payload
+const showComment = (state, action) => {
+    const {weiboId, commentList} = action.payload
     const newState = state.map((m) => {
         const {user, weibo} = m
-        if (m.weibo.id === commentList[0].comment.weiboId) {
+        if (m.weibo.id === weiboId) {
             return {
                 user,
                 weibo,
@@ -62,54 +56,58 @@ const allComment = (state, action) => {
     return newState
 }
 
-const pushComment = (weibo, comment) => {
-    let id = 0
-    let cs = weibo.comments
-    if (cs.length > 0) {
-        id = cs[cs.length-1]["id"] + 1
-    }
-    weibo.comments = [
-        ...cs,
-        {
-            id: id,
-            text: comment,
+const hideComment = (state, action) => {
+    const {weiboId} = action.payload
+    const newState = state.map((m) => {
+        const {user, weibo} = m
+        if (m.weibo.id === weiboId) {
+            return {
+                user,
+                weibo
+            }
+        } else {
+            return m
         }
-    ]
-    return weibo
-}
-
-const addComment = (state, action) => {
-    const {weibo_id, comment} = action.payload
-    let w = get(state, weibo_id)
-    w = pushComment(w, comment)
-    const newState = state.map((weibo) => {
-        if (weibo.id === weibo_id) {
-            return w
-        }
-        return weibo
     })
     return newState
 }
 
-const removeComment = (weibo, comment_id) => {
-    const cs = weibo.comments
-    const temp = cs.filter((c) => {
-        return c.id !== comment_id
+const addComment = (state, action) => {
+    const {comment} = action.payload
+    const wid = comment.weiboId
+    const newState = state.map((m) => {
+        const {user, weibo, commentList} = m
+        if (weibo.id === wid) {
+            return {
+                user,
+                weibo,
+                commentList: [
+                    ...commentList,
+                    action.payload
+                ]
+            }
+        }
+        return m
     })
-    weibo.comments = temp
-    console.log(weibo)
-    return weibo
+    return newState
 }
 
 const deleteComment = (state, action) => {
-    const {weibo_id, comment_id} = action.payload
-    let w = get(state, weibo_id)
-    w = removeComment(w, comment_id)
-    const newState = state.map((weibo) => {
-        if (weibo.id === weibo_id) {
-            return w
+    const {comment} = action.payload
+    const wid = comment.weiboId
+    const newState = state.map((m) => {
+        const {user, weibo, commentList} = m
+        if (weibo.id === wid) {
+            const newList = commentList.filter((c) => {
+                return c.comment.id !== comment.id
+            })
+            return {
+                user,
+                weibo,
+                commentList: newList,
+            }
         }
-        return weibo
+        return m
     })
     return newState
 }
@@ -123,7 +121,8 @@ const reducer = function(state = initialState, action) {
         [ADD_WEIBO]: addWeibo,
         [ALL_WEIBO]: allWeibo,
         [DELETE_WEIBO]: deleteWeibo,
-        [ALL_COMMENT]: allComment,
+        [ALL_COMMENT]: showComment,
+        [HIDE_COMMENT]: hideComment,
         [ADD_COMMENT]: addComment,
         [DELETE_COMMENT]: deleteComment,
     }

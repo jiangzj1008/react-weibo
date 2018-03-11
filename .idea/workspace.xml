@@ -2,41 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae82379-8436-4168-8b10-ad747a5d0350" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/.idea/server.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/comment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducer/comments.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/weibo_add.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/comment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/reducer/comments.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.js" afterPath="$PROJECT_DIR$/server/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/server/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/db/comment.json" afterPath="$PROJECT_DIR$/server/db/comment.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/db/user.json" afterPath="$PROJECT_DIR$/server/db/user.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/db/weibo.json" afterPath="$PROJECT_DIR$/server/db/weibo.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/comment.js" afterPath="$PROJECT_DIR$/server/models/comment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/user.js" afterPath="$PROJECT_DIR$/server/models/user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/weibo.js" afterPath="$PROJECT_DIR$/server/models/weibo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/comment.js" afterPath="$PROJECT_DIR$/server/routes/comment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/index.js" afterPath="$PROJECT_DIR$/server/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/main.js" afterPath="$PROJECT_DIR$/server/routes/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/weibo.js" afterPath="$PROJECT_DIR$/server/routes/weibo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/comment_action.js" afterPath="$PROJECT_DIR$/src/actions/comment_action.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/weibo_action.js" afterPath="$PROJECT_DIR$/src/actions/weibo_action.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment_add.js" afterPath="$PROJECT_DIR$/src/components/comment_add.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment_item.js" afterPath="$PROJECT_DIR$/src/components/comment_item.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment_list.js" afterPath="$PROJECT_DIR$/src/components/comment_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/weibo_input.js" afterPath="$PROJECT_DIR$/src/components/weibo_input.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/weibo_item.js" afterPath="$PROJECT_DIR$/src/components/weibo_item.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/weibo_list.js" afterPath="$PROJECT_DIR$/src/components/weibo_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constants/ActionTypes.js" afterPath="$PROJECT_DIR$/src/constants/ActionTypes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constants/comments_action_types.js" afterPath="$PROJECT_DIR$/src/constants/comments_action_types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/container.js" afterPath="$PROJECT_DIR$/src/container.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/home.js" afterPath="$PROJECT_DIR$/src/page/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/login.js" afterPath="$PROJECT_DIR$/src/page/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/register.js" afterPath="$PROJECT_DIR$/src/page/register.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducer/weibos.js" afterPath="$PROJECT_DIR$/src/reducer/weibos.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/index.css" afterPath="$PROJECT_DIR$/src/style/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tools/tool.js" afterPath="$PROJECT_DIR$/src/tools/tool.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,8 +36,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="230">
-                  <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+                <state relative-caret-position="0">
+                  <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                     <element signature="e#199#225#0" expanded="true" />
@@ -68,8 +49,8 @@
           <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-145">
-                  <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                <state relative-caret-position="46">
+                  <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -87,28 +68,32 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="comment_item.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="comment_item.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/comment_item.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="184">
-                  <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-                  <folding />
+                <state relative-caret-position="207">
+                  <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="weibos.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="weibos.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/reducer/weibos.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-306">
-                  <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+                <state relative-caret-position="85">
+                  <caret line="120" column="30" lean-forward="true" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#90#0" expanded="true" />
-                    <element signature="e#565#691#0" expanded="false" />
-                    <element signature="e#1257#1501#0" expanded="false" />
-                    <element signature="e#1541#1816#0" expanded="false" />
-                    <element signature="e#2083#2366#0" expanded="false" />
-                    <element signature="e#2401#2421#0" expanded="false" />
+                    <element signature="e#434#463#0" expanded="false" />
+                    <element signature="e#501#542#0" expanded="false" />
+                    <element signature="e#583#709#0" expanded="false" />
+                    <element signature="e#750#1096#0" expanded="false" />
+                    <element signature="e#1137#1441#0" expanded="false" />
+                    <element signature="e#1481#1924#0" expanded="false" />
+                    <element signature="e#2485#2505#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -117,11 +102,14 @@
           <file leaf-file-name="weibo_item.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/weibo_item.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="62">
-                  <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+                <state relative-caret-position="69">
+                  <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
-                    <element signature="e#208#246#0" expanded="true" />
+                    <element signature="n#!!block;n#getData#0;n#WeiboItem#0" expanded="false" />
+                    <element signature="e#714#1045#0" expanded="false" />
+                    <element signature="e#1071#1501#0" expanded="false" />
+                    <element signature="e#1527#1740#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -130,12 +118,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="comment_list.js" pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="comment_list.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/comment_list.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
-                  <caret line="7" column="66" lean-forward="true" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+                <state relative-caret-position="230">
+                  <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="90" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -143,23 +131,33 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="comment_action.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="comment_action.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/actions/comment_action.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="46">
-                  <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="23" />
+                <state relative-caret-position="184">
+                  <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="comments.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/reducer/comments.js">
+          <file leaf-file-name="ActionTypes.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/constants/ActionTypes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="246">
-                  <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+                <state relative-caret-position="23">
+                  <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="comment_add.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/comment_add.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="161">
+                  <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
                   <folding>
-                    <element signature="e#0#106#0" expanded="true" />
+                    <element signature="e#0#40#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -168,8 +166,8 @@
           <file leaf-file-name="weibo_list.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/weibo_list.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="29" column="102" lean-forward="false" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="102" />
+                <state relative-caret-position="529">
+                  <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -233,17 +231,17 @@
         <option value="$PROJECT_DIR$/src/page/login.js" />
         <option value="$PROJECT_DIR$/src/tools/tool.js" />
         <option value="$PROJECT_DIR$/src/app.js" />
-        <option value="$PROJECT_DIR$/src/components/comment_add.js" />
-        <option value="$PROJECT_DIR$/src/constants/comments_action_types.js" />
         <option value="$PROJECT_DIR$/src/reducer/comments.js" />
-        <option value="$PROJECT_DIR$/src/components/comment_item.js" />
         <option value="$PROJECT_DIR$/src/components/comment.js" />
-        <option value="$PROJECT_DIR$/src/actions/comment_action.js" />
         <option value="$PROJECT_DIR$/src/components/weibo_list.js" />
         <option value="$PROJECT_DIR$/src/page/home.js" />
-        <option value="$PROJECT_DIR$/src/reducer/weibos.js" />
+        <option value="$PROJECT_DIR$/src/constants/comments_action_types.js" />
+        <option value="$PROJECT_DIR$/src/components/comment_add.js" />
         <option value="$PROJECT_DIR$/src/components/weibo_item.js" />
         <option value="$PROJECT_DIR$/src/components/comment_list.js" />
+        <option value="$PROJECT_DIR$/src/actions/comment_action.js" />
+        <option value="$PROJECT_DIR$/src/components/comment_item.js" />
+        <option value="$PROJECT_DIR$/src/reducer/weibos.js" />
       </list>
     </option>
   </component>
@@ -292,6 +290,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -351,7 +350,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -494,11 +492,12 @@
       <workItem from="1520473445626" duration="24443000" />
       <workItem from="1520602039038" duration="7733000" />
       <workItem from="1520642661116" duration="39235000" />
+      <workItem from="1520731986559" duration="8655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134303000" />
+    <option name="totallyTimeSpent" value="142958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -507,13 +506,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14172813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25571272" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32752994" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -531,7 +530,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -651,25 +650,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/weibo_add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/weibo_add.js" />
     <entry file="file://$PROJECT_DIR$/src/page/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,9 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="60" column="29" lean-forward="true" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -717,10 +701,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#199#225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducer/comments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1640">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/comments_action_types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/weibo_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/comment_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/weibo_item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="n#!!block;n#getData#0;n#WeiboItem#0" expanded="false" />
+            <element signature="e#714#1045#0" expanded="false" />
+            <element signature="e#1071#1501#0" expanded="false" />
+            <element signature="e#1527#1740#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/comment_add.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="161">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -735,47 +806,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#199#225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/comments_action_types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer/comments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/comment.js">
+    <entry file="file://$PROJECT_DIR$/src/components/comment_item.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -784,72 +818,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/comment_action.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="184">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/weibo_list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="102" lean-forward="false" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="102" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducer/weibos.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        <state relative-caret-position="85">
+          <caret line="120" column="30" lean-forward="true" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
           <folding>
             <element signature="e#0#90#0" expanded="true" />
-            <element signature="e#565#691#0" expanded="false" />
-            <element signature="e#1257#1501#0" expanded="false" />
-            <element signature="e#1541#1816#0" expanded="false" />
-            <element signature="e#2083#2366#0" expanded="false" />
-            <element signature="e#2401#2421#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/weibo_item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#208#246#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/comment_item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/comment_list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="66" lean-forward="true" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#434#463#0" expanded="false" />
+            <element signature="e#501#542#0" expanded="false" />
+            <element signature="e#583#709#0" expanded="false" />
+            <element signature="e#750#1096#0" expanded="false" />
+            <element signature="e#1137#1441#0" expanded="false" />
+            <element signature="e#1481#1924#0" expanded="false" />
+            <element signature="e#2485#2505#0" expanded="false" />
           </folding>
         </state>
       </provider>

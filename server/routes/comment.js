@@ -23,17 +23,14 @@ comment.post('/add', loginRequired, (request, response) => {
     const u = currentUser(request)
     const form = request.body
     form.userId = u.id
-    const c = Comment.create(form)
-    const weiboId = Number(form.weiboId)
-    const w = Weibo.get(weiboId)
-    response.redirect(`/weibo/user/${w.userId}`)
+    const dict = Comment.create(form)
+    response.json(dict)
 })
 
 comment.get('/delete/:commentId', commentOwnerRequire, (request, response) => {
     const commentId = Number(request.params.commentId)
-    const c = Comment.remove(commentId)
-    const w = Weibo.get(c.weiboId)
-    response.redirect(`/weibo/user/${w.userId}`)
+    const dict = Comment.remove(commentId)
+    response.json(dict)
 })
 
 comment.get('/edit/:commentId', commentOwnerRequire, (request, response) => {
