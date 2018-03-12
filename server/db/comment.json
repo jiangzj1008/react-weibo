@@ -61,5 +61,14 @@
     "userId": 1,
     "weiboId": 14,
     "deleted": true
+  },
+  {
+    "id": 8,
+    "created_time": 1520778941004,
+    "updated_time": 1520778941004,
+    "content": "好的，我知道了",
+    "userId": 3,
+    "weiboId": 15,
+    "deleted": false
   }
 ]

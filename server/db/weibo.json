@@ -106,10 +106,10 @@
   {
     "id": 14,
     "created_time": 1520684879938,
-    "updated_time": 1520684879938,
+    "updated_time": 1520778974588,
     "content": "你好不好",
     "userId": 1,
-    "deleted": false
+    "deleted": true
   },
   {
     "id": 15,
@@ -117,6 +117,22 @@
     "updated_time": 1520735899897,
     "content": "我很好",
     "userId": 1,
+    "deleted": false
+  },
+  {
+    "id": 16,
+    "created_time": 1520778922725,
+    "updated_time": 1520778963243,
+    "content": "这是是个微博应用",
+    "userId": 3,
+    "deleted": true
+  },
+  {
+    "id": 17,
+    "created_time": 1520779041494,
+    "updated_time": 1520779041494,
+    "content": "今天天气很好啊",
+    "userId": 3,
     "deleted": false
   }
 ]
