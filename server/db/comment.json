@@ -65,8 +65,17 @@
   {
     "id": 8,
     "created_time": 1520778941004,
-    "updated_time": 1520778941004,
+    "updated_time": 1520871993072,
     "content": "好的，我知道了",
+    "userId": 3,
+    "weiboId": 15,
+    "deleted": true
+  },
+  {
+    "id": 9,
+    "created_time": 1520871997454,
+    "updated_time": 1520871997454,
+    "content": "好的",
     "userId": 3,
     "weiboId": 15,
     "deleted": false

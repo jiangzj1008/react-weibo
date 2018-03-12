@@ -55,8 +55,6 @@ class Model {
         const ms = cls.all()
         const index = ms.findIndex(m => m.id === id)
         if (index > -1) {
-            // 实际开发中, 我们不会直接删除数据(物理删除)
-            // 而是通过添加一个字段用来表示这个数据被删除(逻辑删除)
             ms.splice(index, 1)
         }
         const path = cls.dbPath()
@@ -66,12 +64,6 @@ class Model {
     static all() {
         const path = this.dbPath()
         const models = load(path)
-        // 之前的写法是
-        // const instance = cls.create(m)
-        // 这样的话会出现递归调用的情况
-        // 因为 create 里会调用 save 方法, save 方法里又会调用 all 方法
-        // 即 all -> create -> save -> all
-        // 为了避免这种情况, 用一个不调用 save 的新方法来生成实例
         const ms = models.map(m => this._newFromMapper(m))
         return ms
     }

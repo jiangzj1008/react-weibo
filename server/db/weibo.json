@@ -130,8 +130,16 @@
   {
     "id": 17,
     "created_time": 1520779041494,
-    "updated_time": 1520779041494,
+    "updated_time": 1520872002292,
     "content": "今天天气很好啊",
+    "userId": 3,
+    "deleted": true
+  },
+  {
+    "id": 18,
+    "created_time": 1520871986521,
+    "updated_time": 1520871986521,
+    "content": "新的微博",
     "userId": 3,
     "deleted": false
   }

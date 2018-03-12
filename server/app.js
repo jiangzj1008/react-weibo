@@ -10,7 +10,6 @@ const { secretKey } = require('./config')
 
 const index = require('./routes/index')
 const admin = require('./routes/admin')
-const todo = require('./routes/todo')
 const weibo = require('./routes/weibo')
 const comment = require('./routes/comment')
 
@@ -37,7 +36,6 @@ app.use('/static', express.static(asset))
 
 app.use('/', index)
 app.use('/admin', admin)
-app.use('/todo', todo)
 app.use('/weibo', weibo)
 app.use('/comment', comment)
 

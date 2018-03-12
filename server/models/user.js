@@ -1,5 +1,4 @@
 const Model = require('./main')
-const Todo = require('./todo')
 const crypto = require('crypto')
 
 class User extends Model {
@@ -85,12 +84,6 @@ class User extends Model {
             }
         })
         u.save()
-    }
-
-    todos() {
-        const todos = Todo.all()
-        const ts = todos.filter(t => t.userId === this.id)
-        return ts
     }
 
     isGuest() {

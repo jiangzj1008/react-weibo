@@ -36,7 +36,6 @@ index.post('/register', (request, response) => {
 })
 
 index.get('/logout', (request, response) => {
-    // 注销登录的时候, 将 session 清空就可以了
     request.session = null
     response.redirect('/')
 })
