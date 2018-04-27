@@ -48,6 +48,7 @@ const __main = (port=3000, host='') => {
 // 这是分支的测试
 
 if (require.main === module) {
+    // ge2的分支测试
     const port = 5000
     const host = '0.0.0.0'
     __main(port, host)
